@@ -33,6 +33,7 @@ function App() {
 
       {/* Welcome Message */}
       <WelcomeMessage />
+      <Counter />
 
       {/* Counter */}
       <h1>Vite + React</h1>
