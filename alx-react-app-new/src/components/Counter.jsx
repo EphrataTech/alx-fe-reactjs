@@ -4,10 +4,10 @@ export default function Counter({ count, setCount }) {
     const [count, setCount] = useState(0);
        <div>
     <button onClick={() => setCount(count + 1)}>
-     Increament
+     Increment
     </button>   
     <button onClick={() => setCount(count - 1)}>
-      Decreament
+      Decrement
     </button>
     <button onClick={() => setCount(0)}>
        Reset
