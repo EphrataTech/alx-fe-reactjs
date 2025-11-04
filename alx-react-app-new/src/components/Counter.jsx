@@ -4,13 +4,13 @@ export default function Counter({ count, setCount }) {
     const [count, setCount] = useState(0);
        <div>
     <button onClick={() => setCount(count + 1)}>
-      Count: {count}
+     Increament
     </button>   
     <button onClick={() => setCount(count - 1)}>
-      Count: {count}
+      Decreament
     </button>
     <button onClick={() => setCount(0)}>
-        count: {count}
+       Reset
     </button>
 
     </div>
