@@ -1,6 +1,6 @@
 import UserDetails from './UserDetails';
 
-function UserInfo({ userData }) {
+function UserInfo() {
   return <UserDetails userData={userData} />;
 }
 
