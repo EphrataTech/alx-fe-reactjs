@@ -1,33 +1,62 @@
-// src/components/Search.jsx
 import { useState } from "react";
+import { fetchUserData } from "../services/githubService";
 
-const Search = ({ onSearch }) => {
+const Search = () => {
   const [username, setUsername] = useState("");
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (username.trim()) {
-      onSearch(username); // Call parent function
-      setUsername("");    // Clear input after search
+      setLoading(true);
+      setError(null);
+      setUserData(null);
+      
+      try {
+        const data = await fetchUserData(username);
+        setUserData(data);
+      } catch (err) {
+        setError("Looks like we cant find the user");
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2 p-4">
-      <input
-        type="text"
-        placeholder="Enter GitHub username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        className="border p-2 flex-1 rounded"
-      />
-      <button
-        type="submit"
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        Search
-      </button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+        <input
+          type="text"
+          placeholder="Enter GitHub username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          style={{ padding: '8px', marginRight: '8px', width: '200px' }}
+        />
+        <button type="submit" style={{ padding: '8px 16px' }}>
+          Search
+        </button>
+      </form>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+      {userData && (
+        <div style={{ border: '1px solid #ccc', padding: '16px', borderRadius: '8px' }}>
+          <img 
+            src={userData.avatar_url} 
+            alt={userData.login} 
+            style={{ width: '100px', height: '100px', borderRadius: '50%' }}
+          />
+          <h3>{userData.name || userData.login}</h3>
+          <p>@{userData.login}</p>
+          <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
+            View GitHub Profile
+          </a>
+        </div>
+      )}
+    </div>
   );
 };
 
