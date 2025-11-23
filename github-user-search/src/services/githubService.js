@@ -25,12 +25,7 @@ export const searchUsers = async (searchParams) => {
     if (location) query += ` location:${location}`;
     if (minRepos) query += ` repos:>=${minRepos}`;
     
-    const response = await axios.get(`${BASE_URL}/search/users`, {
-      params: {
-        q: query.trim(),
-        page,
-        per_page: 10
-      },
+    const response = await axios.get(`${BASE_URL}/search/users?q=${encodeURIComponent(query.trim())}&page=${page}&per_page=10`, {
       headers: {
         Authorization: GITHUB_API_KEY ? `token ${GITHUB_API_KEY}` : undefined,
       },
