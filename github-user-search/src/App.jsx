@@ -3,9 +3,11 @@ import './App.css'
 
 function App() {
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-      <h1>GitHub User Search</h1>
-      <Search />
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto py-8">
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">GitHub User Search</h1>
+        <Search />
+      </div>
     </div>
   )
 }
