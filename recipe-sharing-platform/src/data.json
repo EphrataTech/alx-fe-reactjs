@@ -1,32 +1,72 @@
 [
-    {
-        "id": 1,
-        "title": "Spaghetti Carbonara",
-        "summary": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
-        "image": "public/spaghetti.png"
-    },
-    {
-        "id": 2,
-        "title": "Chicken Tikka Masala",
-        "summary": "Chunks of roasted marinated chicken in a spiced curry sauce.",
-        "image": "https://www.bbcgoodfood.com/recipes/chicken-tikka-masala"
-    },
-    {
-        "id": 3,
-        "title": "Vegetable Stir Fry",
-        "summary": "A quick and healthy stir-fry with a variety of fresh vegetables.",
-        "image": "https://www.allrecipes.com/recipe/229960/vegetable-stir-fry/"
-    },
-    {
-        "id": 4,
-        "title": "Beef Tacos",
-        "summary": "Seasoned ground beef served in crispy taco shells with fresh toppings.",
-        "image": "https://www.delish.com/cooking/recipe-ideas/a19665918/easy-beef-tacos-recipe/"
-    },
-    {
-        "id": 5,
-        "title": "Chocolate Chip Cookies",
-        "summary": "Classic cookies loaded with chocolate chips.",
-        "image": "https://www.cookieandkate.com/best-chocolate-chip-cookies-recipe/"
-    }
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g parmesan cheese",
+      "Black pepper to taste"
+    ],
+    "instructions": "Cook spaghetti according to package directions. Fry pancetta until crispy. Mix eggs and cheese in a bowl. Drain pasta and combine with pancetta. Remove from heat and stir in egg mixture. Season with black pepper."
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of roasted marinated chicken in a spiced curry sauce.",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400",
+    "ingredients": [
+      "500g chicken breast",
+      "200ml yogurt",
+      "400ml coconut cream",
+      "2 tbsp tikka masala paste",
+      "1 onion, diced"
+    ],
+    "instructions": "Marinate chicken in yogurt and half the tikka paste for 1 hour. Grill chicken until cooked. Fry onion, add remaining paste, then coconut cream. Add chicken and simmer for 10 minutes."
+  },
+  {
+    "id": 3,
+    "title": "Vegetable Stir Fry",
+    "summary": "A quick and healthy stir-fry with a variety of fresh vegetables.",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400",
+    "ingredients": [
+      "2 cups mixed vegetables",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "2 cloves garlic",
+      "1 tsp ginger"
+    ],
+    "instructions": "Heat oil in a wok. Add garlic and ginger, stir for 30 seconds. Add vegetables and stir-fry for 5 minutes. Add soy sauce and cook for 2 more minutes."
+  },
+  {
+    "id": 4,
+    "title": "Beef Tacos",
+    "summary": "Seasoned ground beef served in crispy taco shells with fresh toppings.",
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400",
+    "ingredients": [
+      "500g ground beef",
+      "1 packet taco seasoning",
+      "8 taco shells",
+      "Lettuce, tomatoes, cheese",
+      "Sour cream"
+    ],
+    "instructions": "Brown ground beef in a pan. Add taco seasoning and water, simmer for 5 minutes. Warm taco shells. Fill shells with beef and top with lettuce, tomatoes, cheese, and sour cream."
+  },
+  {
+    "id": 5,
+    "title": "Chocolate Chip Cookies",
+    "summary": "Classic cookies loaded with chocolate chips.",
+    "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400",
+    "ingredients": [
+      "200g flour",
+      "100g butter",
+      "100g sugar",
+      "1 egg",
+      "150g chocolate chips"
+    ],
+    "instructions": "Cream butter and sugar. Add egg and mix. Fold in flour and chocolate chips. Drop spoonfuls onto baking sheet. Bake at 180°C for 12 minutes."
+  }
 ]
