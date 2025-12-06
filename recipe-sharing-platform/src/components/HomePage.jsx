@@ -1,0 +1,37 @@
+import React, { useState, useEffect, use } from 'react'
+import data from "../data.json";
+
+
+const HomePage = () => {
+
+   const[recipes, setRecipes] = useState([]);
+
+   useEffect(() => {
+    setRecipes(data);
+   }, []);
+  return (
+    <div className="container mx-auto p-4">
+        <h1 className="text-3xl font-bold mb-6 text-center text-green-700">Recipe Sharing Platform</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {recipes.map((recipe) => (
+                <div key={recipe.id} className="border rounded-lg shadow p-4">
+                    {/* Recipe Image */}
+                    <img 
+                       src={"recipe.image"}
+                       alt={recipe.title}
+                       className="w-full h-48 object-cover rounded mb-4 hover:scale-105 transition-transform duration-300 ease-in-out"
+                       />
+                    {/* Recipe Title */}
+                    <h2 className="text-xl font-semibold mb-2 text-blue-800 hover:text-blue-500">{recipe.title}</h2>
+                    {/* Recipe Description */}
+                    <p className="text-gray-600 mb-4">{recipe.description}</p>
+                    {/* View Recipe Button */}
+                    <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">View Recipe</button>
+    </div>
+            ))}
+        </div>
+    </div>
+  )
+}
+
+export default HomePage
