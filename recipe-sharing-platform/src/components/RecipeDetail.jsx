@@ -16,6 +16,7 @@ if (!recipe) {
 }
   return (
     <div className="container mx-auto p-4">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
         <img
               src={recipe.image}
                 alt={recipe.title}  
@@ -31,7 +32,8 @@ if (!recipe) {
                 </ul>
 
                 <h2 className="text-xl font-semibold mb-2 text-green-700">Instructions</h2>
-                <p>{recipe.instructions}</p>
+                <p className="text-gray-700">{recipe.instructions}</p>
+        </div>
     </div>
   )
 }
