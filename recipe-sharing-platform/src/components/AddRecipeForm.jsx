@@ -52,15 +52,16 @@ const AddRecipeForm = () => {
     console.log("New Recipe:", newRecipe);
   }
   return (
-    <div className="max-w-lg mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Add a New Recipe</h1>
+    <div className="container mx-auto p-4 md:p-8">
+      <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6 md:p-8">
+      <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center">Add a New Recipe</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <input
             type="text"
             placeholder="Recipe Title"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 md:p-3 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -69,7 +70,7 @@ const AddRecipeForm = () => {
         <div>
           <textarea
             placeholder="Ingredients (separate by commas or new lines)"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 md:p-3 border rounded h-24 md:h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
           />
@@ -78,7 +79,7 @@ const AddRecipeForm = () => {
         <div>
           <textarea
             placeholder="Preparation steps"
-            className="w-full p-2 border rounded"
+            className="w-full p-2 md:p-3 border rounded h-32 md:h-40 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={steps}
             onChange={(e) => setSteps(e.target.value)}
           />
@@ -87,11 +88,12 @@ const AddRecipeForm = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-2 rounded"
+          className="w-full bg-blue-600 text-white p-2 md:p-3 rounded hover:bg-blue-700 transition-colors"
         >
           Submit Recipe
         </button>
       </form>
+      </div>
     </div>
   );
 }
